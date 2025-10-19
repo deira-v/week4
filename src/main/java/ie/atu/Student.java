@@ -1,11 +1,14 @@
 package ie.atu;
 
+import java.util.ArrayList;
+import java.util.Objects;
+
 public class Student {
     private String name;
     private String email;
     private String studentID;
 
-    //default constuctor
+    //default constructor
     public Student()
     {
         System.out.println();
@@ -15,16 +18,29 @@ public class Student {
     }
 
     public String getName() {return name;}
-
-    public void setName(String name) {this.name = name;}
-
     public String getEmail() {return email;}
-
-    public void setEmail(String email) {this.email = email;}
-
     public String getStudentID() {return studentID;}
 
+    public void setName(String name) {this.name = name;}
+    public void setEmail(String email) {this.email = email;}
     public void setStudentID(String studentID) {this.studentID = studentID;}
+
+    /*
+    @Override
+    public boolean equals(Object obj)
+    {
+        if (this == obj)
+            {
+            return true;
+            }
+        if (!(obj instanceof Student))
+            {
+                return false;
+            }
+        Student other = (Student) obj;
+        return Objects.equals(email, other.email);
+    }
+    */
 
     @Override
     public String toString() {
