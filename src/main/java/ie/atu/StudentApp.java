@@ -12,13 +12,25 @@ public class StudentApp
         List<Student> studentsList = new ArrayList<Student>();
 
         System.out.println("Enter the number of students: ");
-        int totalstudents = sc.nextInt();
+        int totalStudents = sc.nextInt();
         sc.nextLine();
 
-        while (count < totalstudents)
+        while (count < totalStudents)
         {
             System.out.println("Please enter your name: ");
             String name = sc.nextLine();
+/*
+            for (int i = 1; i <= totalStudents; i++)
+            {
+                for (int j = i+1; j <= totalStudents; j++)
+                {
+                    if(studentsList.get(i).equals(studentsList.get(j)))
+                    {
+                        System.out.println("Email already in use.");
+                    }
+                }
+            }
+*/
             System.out.println("Please enter your email: ");
             String email = sc.nextLine();
             System.out.println("Please enter your Student ID: ");
