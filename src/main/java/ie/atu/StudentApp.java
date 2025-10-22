@@ -17,28 +17,32 @@ public class StudentApp
 
         while (count < totalStudents)
         {
+            Student student1 = new Student();
+
             System.out.println("Please enter your name: ");
             String name = sc.nextLine();
-/*
-            for (int i = 1; i <= totalStudents; i++)
-            {
-                for (int j = i+1; j <= totalStudents; j++)
-                {
-                    if(studentsList.get(i).equals(studentsList.get(j)))
-                    {
-                        System.out.println("Email already in use.");
-                    }
-                }
-            }
-*/
-            System.out.println("Please enter your email: ");
-            String email = sc.nextLine();
+
             System.out.println("Please enter your Student ID: ");
             String studentID = sc.nextLine();
-            Student student1 = new Student();
             student1.setName(name);
-            student1.setEmail(email);
             student1.setStudentID(studentID);
+
+            System.out.println("Please enter your email: ");
+            String email = sc.nextLine();
+
+            for(int i = 0 ; i < totalStudents; i++)
+            {
+                if(studentsList.get(i).getEmail().equals(email))
+                {
+                    System.out.println("Email already exists!");
+                    continue;
+                }
+                else {
+                    student1.setEmail(email);
+                    i = totalStudents;
+                }
+            }
+
             studentsList.add(student1);
             count++;
 

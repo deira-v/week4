@@ -25,22 +25,6 @@ public class Student {
     public void setEmail(String email) {this.email = email;}
     public void setStudentID(String studentID) {this.studentID = studentID;}
 
-    /*
-    @Override
-    public boolean equals(Object obj)
-    {
-        if (this == obj)
-            {
-            return true;
-            }
-        if (!(obj instanceof Student))
-            {
-                return false;
-            }
-        Student other = (Student) obj;
-        return Objects.equals(email, other.email);
-    }
-    */
 
     @Override
     public String toString() {
