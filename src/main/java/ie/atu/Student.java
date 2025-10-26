@@ -25,6 +25,8 @@ public class Student {
     public void setEmail(String email) {this.email = email;}
     public void setStudentID(String studentID) {this.studentID = studentID;}
 
+    public void uniqueEmail()
+    {this.email = email;}
 
     @Override
     public String toString() {
