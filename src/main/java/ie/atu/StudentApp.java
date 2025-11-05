@@ -70,10 +70,6 @@ public class StudentApp
             i++;
         }
 
-        //Read Students list from the File
-        //showFile();
-
-
         //populate the students
         for (Student student : studentsList)
         {
