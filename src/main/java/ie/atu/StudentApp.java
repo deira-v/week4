@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-
 public class StudentApp
 {
     public static void main(String[] args) {
@@ -17,7 +16,8 @@ public class StudentApp
         //create arraylist
         List<Student> studentsList = new ArrayList<Student>();
 
-        System.out.println("Enter file name to save the student list: (e.g. nameFile.txt)");
+        //prompt for file name
+        System.out.println("Enter file name to save the student list: (e.g. st.txt)");
         String fileName = sc.nextLine().trim();
 
         System.out.println("Enter the number of students: ");
@@ -28,7 +28,7 @@ public class StudentApp
         {
             Student student1 = new Student();   //new object of Student
 
-            //prompt for nane, studentId, email
+            //prompt for name, studentId, email
             System.out.println("User:" + i);
             System.out.println("Please enter your name: ");
             String name = sc.nextLine();
@@ -42,7 +42,7 @@ public class StudentApp
             String email = sc.nextLine().trim();
 
             //check for existing email and ask to re-enter email
-            for(Student s: studentsList) {  //loop thru the array
+            for(Student s: studentsList) {  //loop through the array
 
                 while (email.trim().equalsIgnoreCase(s.getEmail())) {
                     System.out.println("Email already exists! \n Please Re-Enter your email:");
@@ -51,6 +51,7 @@ public class StudentApp
             }
             //when exit the loop save the email
             student1.setEmail(email);
+
             //save all the information of student1
             studentsList.add(student1);
 
@@ -68,11 +69,18 @@ public class StudentApp
             count++;
             i++;
         }
+
+        //Read Students list from the File
+        //showFile();
+
+
         //populate the students
         for (Student student : studentsList)
         {
             System.out.println(student);
         }
+
     }
+
 }
 

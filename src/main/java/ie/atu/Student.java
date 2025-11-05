@@ -1,7 +1,5 @@
 package ie.atu;
 
-import java.util.ArrayList;
-import java.util.Objects;
 
 public class Student {
     private String name;
@@ -25,16 +23,14 @@ public class Student {
     public void setEmail(String email) {this.email = email;}
     public void setStudentID(String studentID) {this.studentID = studentID;}
 
-    public void uniqueEmail()
-    {this.email = email;}
-
     @Override
     public String toString() {
-        return "Student{" +
+        return "Student List {" +
                 "name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", studentID='" + studentID + '\'' +
                 '}';
     }
+
 }
 
